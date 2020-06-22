@@ -58,7 +58,6 @@ address{font-style:normal;}
 					#section1 .contents .date{position:absolute; top:40px; left:540px; font-size:20px; color:#333;}
 					
 					/*이미지들*/
-					#section1 .contents .imgs{}
 					#section1 .contents .thanks{position:absolute; top:5px; left:725px;}
 					
 					#section1 .contents .slide2{position:absolute; left:965px; top:415px; width:235px; height:86px; overflow:hidden;}
@@ -67,6 +66,8 @@ address{font-style:normal;}
 					
 					#section1 .contents .slide{position:absolute; top:104px; width:710px; height:397px; overflow:hidden;}
 					#section1 .contents .slide img{width:710px; position:absolute; top:0; left:0;}
+					
+					
 					
 					/*추천메뉴*/
 					#section1 .contents .chuchun{width: 473px; height:108px; border:1px solid #aaa; position:absolute; top:284px; left:725px;}

@@ -42,13 +42,15 @@
 					$("#section1 .contents .slide img").each(function(){
 						var left = parseInt($(this).css("left"));
 						var movepos = left - 745;
-						$(this).animate({left:movepos},500,function(){
+						$(this).animate({left:movepos},1500,function(){
 							if(left==-745){
 								$(this).css("left",2980);
 							}
 						});
 					});
-				},4000);
+				},5000);
+		
+				
 		//슬라이드2
 		$('#section1 .contents .slide2 img').each(function(dd){
 			$(this).css({left:235*dd});
@@ -57,7 +59,7 @@
 			$("#section1 .contents .slide2 img").each(function(){
 				var slide2 = parseInt($(this).css("left"));
 				var movepos = slide2 - 235;
-				$(this).animate({left:movepos},500,function(){
+				$(this).animate({left:movepos},1000,function(){
 				if(slide2==-235){
 					$(this).css("left",470);
 				}
@@ -65,13 +67,13 @@
 		});
 	},4000);
 
-	
+		//뉴스창
 	$("#section2 .chart>ul>li>h3").click(function(){
 		$(this).parents("li").siblings().removeClass("on");
 		$(this).parents("li").addClass("on");
 	});
 
-
+		//푸터 메뉴
 	$("#footer ul li").each(function(aa){
 		$(this).css({left:550+(140*aa)});
 	});

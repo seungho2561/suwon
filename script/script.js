@@ -38,18 +38,44 @@
 	$('#section1 .contents .slide img').each(function(cc){
 		$(this).css({left:745*cc});
 	});
-	setInterval(function(){
-					$("#section1 .contents .slide img").each(function(){
-						var left = parseInt($(this).css("left"));
-						var movepos = left - 745;
-						$(this).animate({left:movepos},1500,function(){
-							if(left==-745){
-								$(this).css("left",2980);
-							}
-						});
-					});
-				},5000);
-		
+	var auto=setInterval(function(next){
+				$("#section1 .contents .slide img").each(function(){
+					var left = parseInt($(this).css("left"));
+					//var left = parseInt($(#section1 .contents .slide img).eq(slide1index);
+					var movepos = left - 745;
+					$(this).animate({left:movepos},1500,function(){
+						if(left==-745){
+							$(this).css("left",2980);
+						}
+					});					
+				});
+			},5000);
+	/*슬라이드1에 마우스 대면 슬라이드가 움직이지 않게*/
+	var slide1index=0;
+	$('#section1 .contents .slide').hover(	//mouseenter + mouseleave
+		function(){
+		clearInterval(auto);
+		},
+		function Slide(){
+			auto = setInterval(function(){
+				$("#section1 .contents .slide img").each(function(){
+					var left = parseInt($(this).css("left"));
+					var movepos = left - 745;
+					$(this).animate({left:movepos},1500,function(){
+						if(left==-745){
+							$(this).css("left",2980);
+						}
+					});					
+				});
+			},5000);
+		}
+	);
+
+		//슬라이드1 버튼 가로정렬
+		$(".slidebutton>div").each(function(a){
+		var count = $(this).index();
+		$(".slidebutton>div").eq(a).css({left:150+count*70});
+	});
 				
 		//슬라이드2
 		$('#section1 .contents .slide2 img').each(function(dd){
